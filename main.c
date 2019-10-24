@@ -15,14 +15,14 @@ int main(void)
     /* Replace with your application code */
     while (1) 
     {
-		PINB &= ~(1<<PINB1);
-		PINB |= 1<<PINB3;
+		PORTB &= ~(1<<PORTB1);
+		PORTB |= 1<<PORTB3;
 		_delay_ms(1000);
-		PINB &= ~(1<<PINB3);
-		PINB |= 1<<PINB2;
+		PORTB &= ~(1<<PORTB3);
+		PORTB |= 1<<PORTB2;
 		_delay_ms(1000);
-		PINB &= ~(1<<PINB2);
-		PINB |= 1<<PINB1;
+		PORTB &= ~(1<<PORTB2);
+		PORTB |= 1<<PORTB1;
 		_delay_ms(1000);		
     }
 }
@@ -33,7 +33,7 @@ void init()
 	DDRD |= ((1<<DDD6) | (1<<DDD7));
 	PORTB |= ((1<<PORTB0) | (1<<PORTB1) | (1<<PORTB2) | (1<<PORTB3));
 	PORTD |= ((1<<PORTD6) | (1<<PORTD7));
-	PINB &= (~(1<<PINB0) & ~(1<<PINB1) & ~(1<<PINB2) & ~(1<<PINB3));
-	PIND &= (~(1<<PIND6) & ~(1<<PIND7)); 
+	//PINB &= (~(1<<PINB0) & ~(1<<PINB1) & ~(1<<PINB2) & ~(1<<PINB3));
+	//PIND &= (~(1<<PIND6) & ~(1<<PIND7)); 
 }
 
